@@ -38,7 +38,7 @@ function checkGuess() {
     numberOfGuessesMessage.style.display = "block";
     numberOfGuessesMessage.innerHTML = `You made ${attempts} guesses`;
 
-    correctMessage.style.display = " ";
+    correctMessage.style.display = "block";
 
     submitButton.disabled = false;
     guessInput.disabled = true;
@@ -66,8 +66,10 @@ function checkGuess() {
   if (attempts === maxNumberOfAttempts) {
     submitButton.disabled = true;
     guessInput.disabled = true;
+    maxGuessesMessage.style.display = "block";
+    resetButton.style.display = "block";
   }
-  guessInput.value = " ";
+  // guessInput.value = " ";
 
   resetButton.style.display = "block";
 }
